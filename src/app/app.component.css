@@ -3,6 +3,7 @@
 }
 
 .main-block {
+  font-family: 'Montserrat', sans-serif;
   display: block;
   margin: 10% auto;
   border: 1px solid grey;
@@ -10,11 +11,13 @@
   width: 250px;
 }
 
-.keypad-input {
+.math-expression-block {
   font-size: 30px;
   color: #4e5358;
+  font-weight: 500;
   height: 50px;
   width: 100%;
+  overflow: hidden;
   border: 1px solid grey;
 }
 
@@ -24,13 +27,13 @@
 }
 
 .keypad-button {
+  font-weight: 600;
   width: 25%;
   font-size: 20px;
-  font-weight: bold;
   margin: 0;
   padding: 15px 0;
   border: 1px solid grey;
-  background: #e5e5e5;
+  background: #dcdcdc;
 }
 
 .equal-button {

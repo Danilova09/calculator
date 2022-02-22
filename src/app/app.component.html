@@ -1,10 +1,10 @@
 <div class="main-block">
-  <input type="text" style="text-align: right;" class="keypad-input" [value]="mathExpression | async">
+  <div style="text-align: right;" class="math-expression-block">{{ mathExpression | async }}</div>
   <div class="keypad-buttons-block">
     <button class="keypad-button" (click)="addCharacter($event)">(</button>
     <button class="keypad-button" (click)="addCharacter($event)">)</button>
-    <button class="keypad-button" (click)="addCharacter($event)">%</button>
-    <button class="keypad-button" (click)="remove()">AC</button>
+    <button class="keypad-button" (click)="removeLastCharacter()">←</button>
+    <button class="keypad-button" (click)="removeAll()">AC</button>
     <button class="keypad-button" value="7" (click)="addCharacter($event)">7</button>
     <button class="keypad-button" value="8" (click)="addCharacter($event)">8</button>
     <button class="keypad-button" value="9" (click)="addCharacter($event)">9</button>
@@ -19,7 +19,7 @@
     <button class="keypad-button" (click)="addCharacter($event)">-</button>
     <button class="keypad-button" value="0" (click)="addCharacter($event)">0</button>
     <button class="keypad-button" (click)="addCharacter($event)">.</button>
-    <button class="keypad-button equal-button">=</button>
+    <button class="keypad-button equal-button" (click)="calculate()">=</button>
     <button class="keypad-button" (click)="addCharacter($event)">+</button>
   </div>
 </div>

@@ -15,4 +15,4 @@ import { calculatorReducer } from './calculator.reducer';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

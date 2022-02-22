@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { addChar, removeAllCharacters } from './calculator.actions';
+import { addChar, getAnswer, removeAllCharacters, removeLastCharacter } from './calculator.actions';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ import { addChar, removeAllCharacters } from './calculator.actions';
 export class AppComponent {
   mathExpression!: Observable<string>;
 
-  constructor(private store: Store<{char: string}>) {
+  constructor(private store: Store<{ char: string }>) {
     this.mathExpression = store.select('char');
   }
 
@@ -21,7 +21,15 @@ export class AppComponent {
     this.store.dispatch(addChar({char: char}));
   }
 
-  remove() {
+  removeAll() {
     this.store.dispatch(removeAllCharacters());
+  }
+
+  removeLastCharacter() {
+    this.store.dispatch(removeLastCharacter());
+  }
+
+  calculate() {
+    this.store.dispatch(getAnswer());
   }
 }
