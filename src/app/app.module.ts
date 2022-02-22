@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
+import { calculatorReducer } from './calculator.reducer';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,7 @@ import { StoreModule } from '@ngrx/store';
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({char: calculatorReducer}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
