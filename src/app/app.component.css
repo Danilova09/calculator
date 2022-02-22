@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+.main-block {
+  display: block;
+  margin: 10% auto;
+  border: 1px solid grey;
+  border-radius: 3px;
+  width: 250px;
+}
+
+.keypad-input {
+  font-size: 30px;
+  color: #4e5358;
+  height: 50px;
+  width: 100%;
+  border: 1px solid grey;
+}
+
+.keypad-buttons-block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.keypad-button {
+  width: 25%;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  padding: 15px 0;
+  border: 1px solid grey;
+  background: #e5e5e5;
+}
+
+.equal-button {
+  background: #92c6fc;
+}
+
+
+
