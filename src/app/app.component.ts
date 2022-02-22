@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { addChar } from './calculator.actions';
+import { addChar, removeAllCharacters } from './calculator.actions';
 
 @Component({
   selector: 'app-root',
@@ -21,4 +21,7 @@ export class AppComponent {
     this.store.dispatch(addChar({char: char}));
   }
 
+  remove() {
+    this.store.dispatch(removeAllCharacters());
+  }
 }
